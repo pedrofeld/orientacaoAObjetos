@@ -3,6 +3,9 @@ import { Livro } from './associacao/livro';
 import { Departamento } from './agregacao/departamento';
 import { Universidade } from './agregacao/universidade';
 import { Carro } from './composicao/carro';
+import { Animal } from './heranca/animal';
+import { Gato } from './heranca/gato';
+import { Cachorro } from './heranca/cachorro';
 
 console.log("=== ASSOCIAÇÃO ===");
 const autor = new Autor("J.K. Rowling", "jk@email.com");
@@ -29,3 +32,11 @@ console.log(carro.ligarCarro());
 console.log("Potência do motor:", carro.getInfoMotor());
 // const motor = new Motor(100); // não permite acesso externo
 // console.log(motor.ligar()); // não permite acesso externo
+
+console.log("\n=== HERANÇA ===");
+const cachorro = new Cachorro("Rex", 3, "Labrador");
+const gato = new Gato("Mimi", 2, "Preto");
+console.log(`Cachorro faz: ${cachorro.emitirSom()}`);
+console.log(`Cachorro: ${cachorro.abanarRabo()}`);
+console.log(`Gato faz: ${gato.emitirSom()}`);
+console.log(`Gato: ${gato.arranhar()}`);
