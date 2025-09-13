@@ -1,0 +1,3 @@
+export class Departamento {
+    constructor(public nome: string) {}
+}
